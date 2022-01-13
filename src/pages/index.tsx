@@ -1,9 +1,18 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
+import { useRouter } from 'next/router';
+import { MouseEvent } from 'react';
+import DuzzyLogo from 'src/components/DuzzyLogo';
 
 import ColorSystem from 'src/utils/ColorSystem';
 
 const Home: NextPage = () => {
+  const router = useRouter();
+
+  const handleClick = (e: MouseEvent<HTMLElement>) => {
+    router.push('/main');
+  };
+
   return (
     <div>
       <Head>
@@ -13,14 +22,10 @@ const Home: NextPage = () => {
       </Head>
       <main
         style={{ backgroundColor: ColorSystem.main }}
-        className="flex justify-center w-full items-center h-screen mx-auto"
+        className="flex justify-center w-full items-center h-screen mx-auto cursor-default select-none"
+        onClick={handleClick}
       >
-        <div className="flex space-x-2">
-          <div className="w-3 h-3 rounded-full bg-white" />
-          <div className="text-center w-full text-6xl text-white font-bold font-ubuntu">
-            Duzzy
-          </div>
-        </div>
+        <DuzzyLogo onClick={handleClick} />
       </main>
     </div>
   );

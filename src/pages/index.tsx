@@ -1,6 +1,7 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import ColorSystem from 'utils/ColorSystem';
+
+import ColorSystem from 'src/utils/ColorSystem';
 
 const Home: NextPage = () => {
   return (

@@ -1,5 +1,5 @@
 {
-  "name": "frontend",
+  "name": "duzzy-frontend",
   "private": true,
   "scripts": {
     "dev": "next dev",

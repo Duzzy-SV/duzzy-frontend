@@ -1,7 +1,6 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-import { MouseEvent } from 'react';
 
 import DuzzyLogo from 'src/components/DuzzyLogo';
 import ColorSystem from 'src/utils/ColorSystem';
@@ -9,7 +8,7 @@ import ColorSystem from 'src/utils/ColorSystem';
 const Home: NextPage = () => {
   const router = useRouter();
 
-  const handleClick = (e: MouseEvent<HTMLElement>) => {
+  const handleClick = (e: React.MouseEvent<HTMLElement>) => {
     router.push('/main');
   };
 
